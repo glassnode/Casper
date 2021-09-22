@@ -182,7 +182,7 @@ production stylesheet in assets/built/screen.css
 .gh-head-inner {
     display: grid;
     grid-gap: 2.5vmin;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto 1fr auto;
     grid-auto-flow: row dense;
 }
 
@@ -246,6 +246,13 @@ production stylesheet in assets/built/screen.css
     opacity: 1;
 }
 
+.gh-head-menu--secondary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    text-align: right;
+}
 
 /* Secondary Navigation
 /* ---------------------------------------------------------- */
@@ -273,10 +280,11 @@ production stylesheet in assets/built/screen.css
 
 .gh-social {
     margin: 0 1.5vmin 0 0;
+    cursor: pointer;
 }
 
 .gh-social a {
-    opacity: 0.8
+    opacity: 0.8;
 }
 
 .gh-social a + a {
@@ -1844,6 +1852,10 @@ html.dark-mode .gh-content :not(pre) > code {
     background: color-mod(var(--color-darkgrey) l(+6%));
     border-color: color-mod(var(--color-darkmode) l(+8%));
     color: var(--color-wash);
+}
+
+html.dark-mode .gh-content a {
+    color: #fff;
 }
 
 html.dark-mode .post-full-content a {
