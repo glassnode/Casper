@@ -21,6 +21,7 @@
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "built/custom.css"}}" />
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -50,21 +51,22 @@
             <div class="gh-head-menu">
                 {{navigation}}
             </div>
-            <div class="gh-head-actions">
-                <div class="gh-social">
-                    {{#if @site.facebook}}
-                        <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                    {{/if}}
-                    {{#if @site.twitter}}
-                        <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                    {{/if}}
-                </div>
+            <div class="gh-head-menu gh-head-menu--secondary">
+                <ul class="nav">
+                    <li class="nav-lang">
+                        <a href="#">Language</a>
+                        <ul class="nav-dropdown" aria-label="submenu">
+                            <li><a href="#">Sub-1</a></li>
+                            <li><a href="#">Sub-2</a></li>
+                            <li><a href="#">Sub-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
-                {{#unless @member}}
-                    <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
-                {{else}}
-                    <a class="gh-head-button" href="#/portal/account">Account</a>
-                {{/unless}}
+                {{navigation type="secondary"}}
+            </div>
+            <div class="gh-head-actions">
+                <a class="gh-social js-toggle-mode">{{> "icons/moon"}}</a>
             </div>
         </nav>
     </header>
