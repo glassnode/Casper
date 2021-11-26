@@ -1,5 +1,4 @@
 /* eslint-env browser */
-
 (function (window, document) {
     var key = "glassnode.dark-mode";
     var className = "dark-mode";
@@ -9,7 +8,7 @@
     var html = document.querySelector("html");
     var toggler = document.querySelector(".js-toggle-mode");
 
-    if (localStorage.getItem(key) || prefersDarkMode.matches) {
+    if (localStorage.getItem(key) === "true" || prefersDarkMode.matches) {
         html.classList.toggle(className);
     }
 
