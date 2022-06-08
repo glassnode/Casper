@@ -150,7 +150,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 .site-logo {
   flex-shrink: 0;
   margin: 0 auto;
-  max-height: 120px;
+  max-height: 55px;
 }
 
 .site-header-content.left-aligned .site-logo {
@@ -252,8 +252,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 /* ---------------------------------------------------------- */
 
 .gh-head {
-  padding-top: min(24px, 3.6vmin);
-  padding-bottom: min(24px, 3.6vmin);
+  padding: 1vmin 4vmin;
   font-size: 1.6rem;
   line-height: 1.3em;
   background-color: #fff;

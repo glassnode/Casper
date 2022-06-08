@@ -43,8 +43,7 @@ html.dark-mode .article-tag a {
     position: relative;
 }
 
-.gh-navbar__brand {
-}
+.gh-navbar__brand {}
 
 .gh-navbar__logo {
     max-width: 180px;
@@ -108,6 +107,7 @@ html.dark-mode .article-tag a {
     display: inline-block;
     padding: 5px 0;
     opacity: 0.8;
+    color: #fff;
 }
 
 .gh-navbar .nav a:hover {
@@ -165,12 +165,12 @@ html.dark-mode .article-tag a {
     background: #fff;
     color: black;
     border-radius: 2px;
-    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08),
-        0px 2px 4px rgba(0, 0, 0, 0.04);
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .nav .nav-lang .nav-dropdown a {
     display: block;
+    color: inherit;
 }
 
 .nav .nav-lang:hover .nav-dropdown,
