@@ -22,10 +22,6 @@ html.dark-mode .article-tag a {
     color: rgba(255, 255, 255, 0.75);
 }
 
-.gh-content a {
-    color: var(--color-darkgrey);
-}
-
 html.dark-mode .article-tag a {
     color: rgba(255, 255, 255, 0.75);
 }
@@ -42,8 +38,6 @@ html.dark-mode .article-tag a {
     align-items: center;
     position: relative;
 }
-
-.gh-navbar__brand {}
 
 .gh-navbar__logo {
     max-width: 180px;
