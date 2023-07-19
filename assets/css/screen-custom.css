@@ -193,3 +193,53 @@ html.dark-mode .article-tag a {
         display: none;
     }
 }
+
+.d-none {
+    display: none !important;
+}
+
+.newsletter-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #16171b;
+    padding: 20px 44px;
+}
+
+.newsletter-banner__form {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-banner__form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-banner__disclaimer {
+    font-size: 12px;
+    color: #a0a0a0;
+}
+
+.newsletter-banner__form__input {
+    background: none;
+    border: 1px solid #ffffff;
+    height: 40px;
+    appearance: none;
+}
+
+.newsletter-banner__form__input::placeholder {
+    color: #a0a0a0;
+}
+
+.newsletter-banner__dismiss button {
+    background: none;
+}
