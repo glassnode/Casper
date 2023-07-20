@@ -45,6 +45,9 @@ into the {body} of the default.hbs template --}}
         {{#foreach posts}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
+            {{#match @index "=" 5}}
+                {{> "newsletter"}}
+            {{/match}}
         {{/foreach}}
     </div>
 
