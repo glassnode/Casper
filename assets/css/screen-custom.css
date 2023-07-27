@@ -230,9 +230,14 @@ html.dark-mode .article-tag a {
     margin-right: 24px;
 }
 
-.newsletter-banner__disclaimer {
+.newsletter-banner__disclaimer,
+.newsletter-banner__disclaimer a {
     font-size: 12px;
     color: #a0a0a0;
+}
+
+.newsletter-banner__disclaimer a {
+    text-decoration: underline;
 }
 
 .newsletter-banner__form__input {
