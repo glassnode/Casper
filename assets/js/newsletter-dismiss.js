@@ -1,13 +1,13 @@
 (function (window, document) {
-    var localStorageDismissKey = 'hideSignupBanner';
-    var hideBanner = localStorage.getItem(localStorageDismissKey) === 'true';
+    let localStorageDismissKey = 'newsletterFloatBannerHidden';
+    let bannerHidden = localStorage.getItem(localStorageDismissKey) === 'true';
 
-    var banner = document.querySelector('.newsletter-banner');
+    let banner = document.querySelector('.newsletter-banner');
 
-    if (!hideBanner) {
+    if (!bannerHidden && banner) {
         banner.classList.remove('d-none');
 
-        var dismissButton = document.querySelector('.newsletter-banner__dismiss button');
+        let dismissButton = document.querySelector('.newsletter-banner__dismiss button');
 
         dismissButton.addEventListener('click', () => {
             banner.classList.add('d-none');

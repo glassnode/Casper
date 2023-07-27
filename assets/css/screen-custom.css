@@ -209,6 +209,8 @@ html.dark-mode .article-tag a {
     z-index: 100;
     background-color: #16171b;
     padding: 20px 44px;
+    gap: 20px;
+    border-top: 1px solid #ffffff;
 }
 
 .newsletter-banner__form {
@@ -224,6 +226,10 @@ html.dark-mode .article-tag a {
     align-items: center;
 }
 
+.newsletter-banner__body {
+    margin-right: 24px;
+}
+
 .newsletter-banner__disclaimer {
     font-size: 12px;
     color: #a0a0a0;
@@ -234,6 +240,21 @@ html.dark-mode .article-tag a {
     border: 1px solid #ffffff;
     height: 40px;
     appearance: none;
+    min-width: 270px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.newsletter-banner__form__submit {
+    color: #333333;
+    background-color: #ffffff;
+    padding: 8px 16px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    height: 40px;
+    font-size: 14px;
 }
 
 .newsletter-banner__form__input::placeholder {
@@ -242,4 +263,16 @@ html.dark-mode .article-tag a {
 
 .newsletter-banner__dismiss button {
     background: none;
+}
+
+@media screen and (max-width: 991px) {
+    .newsletter-banner {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .newsletter-banner {
+        justify-content: center;
+    }
 }
