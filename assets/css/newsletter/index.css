@@ -1,0 +1,13 @@
+@import 'float-banner.css';
+@import 'post-card.css';
+@import 'hero.css';
+
+.newsletter__disclaimer, .newsletter__disclaimer a {
+    font-size: 14px;
+    line-height: 21px;
+    color: #a0a0a0;
+}
+
+.newsletter__disclaimer a {
+    text-decoration: underline;
+}

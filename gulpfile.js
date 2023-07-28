@@ -50,6 +50,7 @@ function css(done) {
             'assets/css/global.css',
             'assets/css/screen.css',
             'assets/css/screen-custom.css',
+            'assets/css/newsletter/index.css'
         ], {sourcemaps: true}),
         postcss([
             easyimport,
