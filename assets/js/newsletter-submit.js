@@ -33,7 +33,6 @@ function addFormEventListener(document, formName, afterSuccess = null, afterErro
                 }
                 return response.json();
             }).then(result => {
-                console.log(result);
                 if (!result.ok && afterError) {
                     afterError(result.error);
                 }
