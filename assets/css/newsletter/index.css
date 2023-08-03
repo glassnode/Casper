@@ -11,13 +11,13 @@
     text-decoration: underline;
 }
 
-.newsletter__warning--email {
+.newsletter__warning {
     color: #feb5b9;
     font-size: 12px;
     line-height: 1.2;
 }
 
-.newsletter__warning--email span {
+.newsletter__warning span {
     vertical-align: text-bottom;
     margin-right: 10px;
 }
