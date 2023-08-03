@@ -11,3 +11,14 @@
 .newsletter__disclaimer a {
     text-decoration: underline;
 }
+
+.newsletter__warning--email {
+    color: #feb5b9;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.newsletter__warning--email span {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+}
