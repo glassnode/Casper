@@ -197,15 +197,3 @@ html.dark-mode .article-tag a {
 .d-none {
     display: none !important;
 }
-
-.site-header-content {
-    flex-direction: column;
-    gap: 35px;
-    justify-content: center;
-}
-
-@media screen and (max-width: 768px) {
-    .site-header-content {
-        justify-content: flex-start;
-    }
-}
