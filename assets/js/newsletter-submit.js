@@ -1,11 +1,6 @@
 (function (window, document) {
     const forms = [
         {
-            name: 'newsletter-hero',
-            afterSuccess: null,
-            afterError: null,
-        },
-        {
             name: 'newsletter-post-card',
             afterSuccess: null,
             afterError: (warningElement) => {
