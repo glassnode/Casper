@@ -1,26 +1,37 @@
 <div class="newsletter-banner d-none">
-    <div class="newsletter-banner__body">
-        <p class="newsletter-banner__title">Subscribe to receive our latest updates, and best-in-class research on Bitcoin, Ethereum, DeFi, and more.</p>
-        <p class="newsletter__disclaimer">
-            By subscribing, you agree to our
-            <a href="https://studio.glassnode.com/terms-and-conditions" target="_blank" rel="noreferrer noopener">Terms and Conditions</a>
-            and
-            <a href="https://studio.glassnode.com/privacy-notice" target="_blank" rel="noreferrer noopener">Privacy Policies</a>.
-        </p>
-    </div>
-    <div class="newsletter-banner__form">
-        <form id="newsletter-banner-form">
-            <div class="newsletter-banner__form__input-wrapper">
-                <input type="email" id="newsletter-banner-email" name="email" class="newsletter-banner__form__input" placeholder="Email" aria-label="Email Field">
+    <div class="newsletter-banner__container">
+        <div id="newsletter-banner-main" class="newsletter-banner__main">
+            <div class="newsletter-banner__body">
+                <p class="newsletter-banner__title">Subscribe to receive our latest updates, and best-in-class research on Bitcoin, Ethereum, DeFi, and more.</p>
+                <p class="newsletter__disclaimer">
+                    By subscribing, you agree to our
+                    <a href="https://studio.glassnode.com/terms-and-conditions" target="_blank" rel="noreferrer noopener">Terms and Conditions</a>
+                    and
+                    <a href="https://studio.glassnode.com/privacy-notice" target="_blank" rel="noreferrer noopener">Privacy Policies</a>.
+                </p>
             </div>
-            <div class="newsletter-banner__form__submit-wrapper">
-                <button type="submit" id="newsletter-banner-submit" class="newsletter-banner__form__submit">Subscribe</button>
+            <div class="newsletter-banner__form">
+                <form id="newsletter-banner-form">
+                    <div class="newsletter-banner__form__input-wrapper">
+                        <input type="email" id="newsletter-banner-email" name="email" class="newsletter-banner__form__input" placeholder="Email" aria-label="Email Field">
+                    </div>
+                    <div class="newsletter-banner__form__submit-wrapper">
+                        <button type="submit" id="newsletter-banner-submit" class="newsletter-banner__form__submit newsletter__submit">Subscribe</button>
+                    </div>
+                </form>
+                <p id="newsletter-banner-warning" class="d-none newsletter__warning--email">
+                    <span>{{> icons/warning }}</span>
+                    <span id="newsletter-banner-warning-msg"></span>
+                </p>
             </div>
-        </form>
-    </div>
-    <div class="newsletter-banner__dismiss">
-        <button type="button" id="newsletter-banner-dismiss">
-            {{> "icons/close"}}
-        </button>
+        </div>
+        <div class="d-none" id="newsletter-banner-success">
+            <p class="newsletter-banner__title">Thank you for subscribing.</p>
+        </div>
+        <div class="newsletter-banner__dismiss">
+            <button type="button" id="newsletter-banner-dismiss">
+                {{> "icons/close"}}
+            </button>
+        </div>
     </div>
 </div>

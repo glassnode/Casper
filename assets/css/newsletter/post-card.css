@@ -2,7 +2,13 @@
     background: linear-gradient(181deg, #4559DC 0%, #1A1A1A 86.11%);
     color: #dedfe1;
     text-align: center;
-    padding: 36px 8px;
+    padding: 30px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-post-card__main {
     display: flex;
     justify-content: center;
     flex-direction: column;

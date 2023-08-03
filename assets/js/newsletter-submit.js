@@ -1,29 +1,18 @@
 (function (window, document) {
     const forms = [
-        {
-            name: 'newsletter-post-card',
-            afterSuccess: null,
-            afterError: (warningElement) => {
-                warningElement.classList.remove('d-none');
-            }
-        },
-        {
-            name: 'newsletter-banner',
-            afterSuccess: null,
-            afterError: null,
-        },
+        'newsletter-post-card',
+        'newsletter-banner',
     ]
+
     forms.map(form => {
-        addFormEventListener(document, form.name, form.afterSuccess, form.afterError);
+        addFormEventListener(document, form, createAfterSuccess(form), createAfterError(form));
     })
 })(window, document);
 
 function addFormEventListener(document, formName, afterSuccess = null, afterError = null) {
-    console.log(formName + '-form');
-    let form = document.getElementById(formName + '-form');
-    let emailField = document.getElementById(formName + '-email');
-    let button = document.getElementById(formName + '-submit');
-    let warning = document.getElementById(formName + '-warning');
+    const form = document.getElementById(formName + '-form');
+    const emailField = document.getElementById(formName + '-email');
+    const button = document.getElementById(formName + '-submit');
 
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -37,18 +26,40 @@ function addFormEventListener(document, formName, afterSuccess = null, afterErro
                     'Content-Type': 'application/json',
                 },
                 method: 'POST',
-            }).then(res => {
-                console.log(res);
-                if (afterSuccess) {
+            }).then(response => {
+                button.disabled = false;
+                if (response.ok && afterSuccess) {
                     afterSuccess();
                 }
-                button.disabled = false;
+                return response.json();
+            }).then(result => {
+                console.log(result);
+                if (!result.ok && afterError) {
+                    afterError(result.error);
+                }
             }).then(err => {
                 console.error(err);
-                if (afterError) {
-                    afterError(warning);
-                }
             });
         });
+    }
+}
+
+function createAfterSuccess(formName) {
+    return () => {
+        const mainElement = document.getElementById(formName + '-main');
+        const successElement = document.getElementById(formName + '-success');
+
+        mainElement.classList.add('d-none');
+        successElement.classList.remove('d-none');
+    }
+}
+
+function createAfterError(formName) {
+    return (msg) => {
+        const warningElement = document.getElementById(formName + '-warning');
+        const warningMessage = document.getElementById(formName + '-warning-msg');
+
+        warningMessage.innerText = msg;
+        warningElement.classList.remove('d-none');
     }
 }
