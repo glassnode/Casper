@@ -20,7 +20,7 @@ function addFormEventListener(document, formName, afterSuccess = null, afterErro
             let email = emailField.value;
             button.disabled = true;
 
-            fetch('http://localhost:3000/api/subscribe', {
+            fetch('https://forms.glassnode.com/api/subscribe', {
                 body: JSON.stringify({ email: email, type: 'newsletter' }),
                 headers: {
                     'Content-Type': 'application/json',
@@ -37,7 +37,9 @@ function addFormEventListener(document, formName, afterSuccess = null, afterErro
                     afterError(result.error);
                 }
             }).then(err => {
-                console.error(err);
+                if (err) {
+                    console.error(err);
+                }
             });
         });
     }
