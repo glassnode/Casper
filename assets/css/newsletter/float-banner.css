@@ -11,6 +11,7 @@
     padding: 20px 44px;
     gap: 20px;
     border-top: 1px solid #ffffff;
+    color: #f7f8fa;
 }
 
 .newsletter-banner__container {
@@ -31,6 +32,10 @@
 
 .newsletter-banner__body {
     margin-right: 24px;
+}
+
+.newsletter-banner__body p {
+    color: #f7f8fa;
 }
 
 .newsletter-banner__form {
