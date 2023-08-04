@@ -28,10 +28,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-}
-
-.newsletter-banner__body {
-    margin-right: 24px;
+    flex-grow: 1;
 }
 
 .newsletter-banner__body p {

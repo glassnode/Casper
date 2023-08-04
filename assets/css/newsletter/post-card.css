@@ -1,8 +1,8 @@
 .newsletter-post-card {
-    background: linear-gradient(181deg, #303974 0%, #1A1A1A 60%);
+    background: linear-gradient(181deg, #272d59 0%, #1A1A1A 60%);
     color: #dedfe1;
     text-align: center;
-    padding: 30px 8px;
+    padding: 30px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
