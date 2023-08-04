@@ -1,0 +1,27 @@
+@import 'float-banner.css';
+@import 'post-card.css';
+
+.newsletter__disclaimer, .newsletter__disclaimer a {
+    font-size: 14px;
+    line-height: 21px;
+    color: #a0a0a0;
+}
+
+.newsletter__disclaimer a {
+    text-decoration: underline;
+}
+
+.newsletter__warning {
+    color: #feb5b9;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.newsletter__warning span {
+    vertical-align: text-bottom;
+    margin-right: 10px;
+}
+
+.newsletter__submit:disabled {
+    cursor: not-allowed;
+}

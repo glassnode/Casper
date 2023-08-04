@@ -193,3 +193,7 @@ html.dark-mode .article-tag a {
         display: none;
     }
 }
+
+.d-none {
+    display: none !important;
+}
