@@ -12,6 +12,12 @@
     gap: 20px;
     border-top: 1px solid #ffffff;
     color: #f7f8fa;
+    min-height: 90px;
+    transition: bottom 500ms ease-out;
+}
+
+.newsletter-banner--hidden {
+    bottom: -150px;
 }
 
 .newsletter-banner__container {
