@@ -67,6 +67,7 @@ function addFormEventListener(document, formName, afterSuccess = null, afterErro
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
+            plausible('Newsletter Signup', {props: {component: formName, path: window.location.pathname}})
             let email = emailField.value;
             button.disabled = true;
 
