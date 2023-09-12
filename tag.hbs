@@ -43,11 +43,17 @@
         {{/tag}}
 
         {{#foreach posts}}
+            {{#match ../tag.slug "=" "newsletter"}}
+                {{#match @index "=" 0}}
+                    {{> "newsletter-post-card-simple"}}
+                {{/match}}
+            {{else}}
+                {{#match @index "=" 7}}
+                    {{> "newsletter-post-card"}}
+                {{/match}}
+            {{/match}}
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
             {{> "post-card"}}
-            {{#match @index "=" 6}}
-                {{> "newsletter-post-card"}}
-            {{/match}}
         {{/foreach}}
 
     </div>

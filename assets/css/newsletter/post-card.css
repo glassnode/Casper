@@ -63,4 +63,31 @@
     background-color: #edeff2;
 }
 
+.newsletter-post-card-simple .newsletter-post-card__main {
+    justify-content: space-between;
+    height: 100%;
+}
 
+.newsletter-post-card-simple h2 {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .newsletter-post-card-simple {
+        padding: 20px 15px;
+    }
+
+    .newsletter-post-card-simple .newsletter-post-card__main {
+        gap: 12px;
+    }
+
+    .newsletter-post-card-simple h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .newsletter-post-card-simple .newsletter-post-card__form__submit {
+        margin: 8px 0 0;
+    }
+}
